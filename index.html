@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Bootstrap CSS -->
+        <!-- https://cdnjs.com/libraries/twitter-bootstrap/5.0.0-beta1 -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css">
+        <!-- Icons: https://getbootstrap.com/docs/5.0/extend/icons/ -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+            integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        >
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+        <title>Meditation App</title>
+        <style>
+            body{
+                /* background: url(./images/rain\ image.jpg); */
+                background: rgb(23, 23, 23);
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+
+            .songSelect button{
+                height: 100px;
+                width: 100px;
+            }
+
+
+            .playerContainer i {
+                font-size: 5vh;
+                display: inline-block;
+            }
+
+            .playerContainer svg{
+                transform: translate(-50%, -50%) rotate(-90deg) !important;
+            }
+
+   
+            /* .bottom-0 {
+                position: absolute;
+                bottom: -90px !important; */
+           
+        </style>
+    </head>
+    <body>
+        <div class="container vh-100 p-3">
+            <div class="row h-100">
+                <div class="col-md-4">
+                    <div class="timeSelect h-100 d-flex flex-row flex-md-column justify-content-evenly align-items-center">
+                        <div class="btn btn-outline-light "data-time="120">2 Minutes</div>
+                        <div class="btn btn-outline-light "data-time="300">5 Minutes</div>
+                        <div class="btn btn-outline-light "data-time="600">10 Minutes</div>
+                    </div>
+                </div>
+                <div class="col-md-4 h-100">
+                    <div class="playerContainer position-relative h-100 ">
+                        <audio class="song">
+                            <source src="./sounds/Rain-Raindrops-00-c-www.FesliyanStudios.com.mp3">
+                        </audio>
+                        <i class=" play fas fa-play text-white d-inline-block cursor-pointer  position-absolute start-50 top-50 translate-middle " aria-hidden="true"></i>
+                        <svg
+                            class="trackOutline position-absolute start-50 top-50 translate-middle pe-none"
+                            height="453"
+                            width="453"
+                            viewBox="0 0 453 453"
+                        >
+                            <circle
+                                cx="230"
+                                cy="230"
+                                r="180"
+                                stroke="black"
+                                stroke-width="20"
+                                fill="transparent"
+                            />
+                            Sorry, your browser does not support inline SVG.
+                        </svg>
+                        <svg
+                            class="movingOutline position-absolute start-50 top-50 translate-middle pe-none"
+                            height="453"
+                            width="453"
+                            viewBox="0 0 453 453"
+                        >
+                            <circle
+                                cx="230"
+                                cy="230"
+                                r="180"
+                                stroke="yellow"
+                                stroke-width="20"
+                                fill="transparent"
+                                
+                            />
+                            Sorry, your browser does not support inline SVG.
+                        </svg>
+                        <h3 class="timeDisplay text-light position-absolute start-50 bottom-0 translate-middle py-5">0:00</h3>
+                    </div>
+                </div>
+                <div class="col-md-4 pb-3 ">
+                    <div class="songSelect h-100 d-flex justify-content-evenly align-items-center flex-row flex-md-column">
+                        <button  class="btn btn-dark bg-info" data-image=".images/rain\ image.jpg" data-sound= "./sounds/Rain-Raindrops-00-c-www.FesliyanStudios.com.mp3">
+                            <img class="img-fluid pe-none" src="./images/rain.png" alt="icon">
+                        </button>
+                        <button class="btn   bg-warning " data-sound= "./sounds/mixkit-beach-waves-with-children-ambience-1193.wav">
+                            <img class="img-fluid pe-none"  data-image=".images/baech\ image.jpg" src="./images/sun.png" alt="icon">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Optional JavaScript; choose one of the two! -->
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.bundle.min.js"></script>
+        <!-- Option 2: Separate Popper and Bootstrap JS -->
+        <!-- https://cdnjs.com/libraries/popper.js/2.5.4 -->
+        <!-- <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.4/umd/popper.min.js"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.min.js"
+    ></script> -->
+        <!-- More: https://getbootstrap.com/docs/5.0/getting-started/introduction/ -->
+        <script src="app.js"></script>
+    </body>
+</html>
